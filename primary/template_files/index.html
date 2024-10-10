@@ -136,10 +136,11 @@
                 <tr>
                     <td scope="row">
                         <div class="checkbox-wrapper-15">
-                            <input class="inp-cbx" id="cbx-15"  data-id="{{data.sno}}" name="checkbox" type="checkbox" {% if data.status %} checked {% endif %}  style="display: none;" />
-                            <label class="cbx" for="cbx-15">
+                            <input class="inp-cbx" id="cbx-{{ data.sno }}" data-id="{{ data.sno }}" name="checkbox" type="checkbox"
+                                   {% if data.status %} checked {% endif %} style="display: none;" />
+                            <label class="cbx" for="cbx-{{ data.sno }}">
                                 <span>
-                                    <svg width="12px" height="9px" viewbox="0 0 12 9">
+                                    <svg width="12px" height="9px" viewBox="0 0 12 9">
                                         <polyline points="1 5 4 8 11 1"></polyline>
                                     </svg>
                                 </span>
