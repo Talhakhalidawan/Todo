@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Todo's</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-dark" style="background-color: #002436 !important;" data-bs-theme="dark">
+
+    <nav class="navbar navbar-expand-lg d-flex" style="background-color: #002c42;">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-3" href="/">Todos</a>
+
+            
+            <a class="navbar-brand text-light ms-5 fw-bold fs-4" href="/create">Create Todo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" style="background-color: #002436;" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Created By</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body d-column justify-content-end">
+                    <a style="background-color: #001925; border-radius: 12px;" class="d-flex justify-content-center navbar-brand px-2 pb-2 fs-5 fw-bold text-nowrap mb-1 mt-1"><span class="text-info">Talha Khalid</span></a>
+                    <div class="dropdown">  
+                        <a style="background-color: #001925; border-radius: 12px;" class="d-flex justify-content-center navbar-brand px-2 pb-2 fs-5 fw-bold text-nowrap mb-1 mt-1" href="#"
+                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               <span>Contact</span>
+                        </a>
+
+                        <ul class="dropdown-menu" style="background-color: #002436;">
+                            <li><a class="dropdown-item" href="https://linkedin.com/in/talha-khalid-920910323"
+                                    target="_blank"> <span>
+                                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                                            aria-label="LinkedIn" role="img" viewBox="0 0 512 550" fill="#ffffff">
+                                            <rect width="512" height="512" rx="15%" fill="#0e7be8" />
+                                            <circle cx="142" cy="138" r="37" />
+                                            <path stroke="#ffffff" stroke-width="66" d="M244 194v198M142 194v198" />
+                                            <path
+                                                d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32" />
+                                        </svg>
+                                    </span> LinkedIn</a></li>
+
+                            <li><a class="dropdown-item" href="https://github.com/Talhakhalidawan" target="_blank">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20"
+                                            viewBox="0 0 20 23" version="1.1">
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                fill-rule="evenodd">
+                                                <g id="Dribbble-Light-Preview"
+                                                    transform="translate(-140.000000, -7559.000000)" fill="#ffffff">
+                                                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                        <path
+                                                            d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"
+                                                            id="github-[#142]"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </span> GitHub</a></li>
+
+                            <li><a class="dropdown-item" href="https://wa.me/923150799213" target="_blank"> <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 32 35" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z"
+                                                fill="#BFC8D0" />
+                                            <path
+                                                d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4 18.5589 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z"
+                                                fill="url(#paint0_linear_87_7264)" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 18.5109 2.661 20.8674 3.81847 22.905L2 30L9.31486 28.3038C11.3014 29.3854 13.5789 30 16 30ZM16 27.8462C22.5425 27.8462 27.8462 22.5425 27.8462 16C27.8462 9.45755 22.5425 4.15385 16 4.15385C9.45755 4.15385 4.15385 9.45755 4.15385 16C4.15385 18.5261 4.9445 20.8675 6.29184 22.7902L5.23077 26.7692L9.27993 25.7569C11.1894 27.0746 13.5046 27.8462 16 27.8462Z"
+                                                fill="white" />
+                                            <path
+                                                d="M12.5 9.49989C12.1672 8.83131 11.6565 8.8905 11.1407 8.8905C10.2188 8.8905 8.78125 9.99478 8.78125 12.05C8.78125 13.7343 9.52345 15.578 12.0244 18.3361C14.438 20.9979 17.6094 22.3748 20.2422 22.3279C22.875 22.2811 23.4167 20.0154 23.4167 19.2503C23.4167 18.9112 23.2062 18.742 23.0613 18.696C22.1641 18.2654 20.5093 17.4631 20.1328 17.3124C19.7563 17.1617 19.5597 17.3656 19.4375 17.4765C19.0961 17.8018 18.4193 18.7608 18.1875 18.9765C17.9558 19.1922 17.6103 19.083 17.4665 19.0015C16.9374 18.7892 15.5029 18.1511 14.3595 17.0426C12.9453 15.6718 12.8623 15.2001 12.5959 14.7803C12.3828 14.4444 12.5392 14.2384 12.6172 14.1483C12.9219 13.7968 13.3426 13.254 13.5313 12.9843C13.7199 12.7145 13.5702 12.305 13.4803 12.05C13.0938 10.953 12.7663 10.0347 12.5 9.49989Z"
+                                                fill="white" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_87_7264" x1="26.5" y1="7" x2="4"
+                                                    y2="28" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#5BD066" />
+                                                    <stop offset="1" stop-color="#27B43E" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </span> Whatsapp</a></li>
+
+                            <li><a class="dropdown-item"
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=talhakhalidlkp@gmail.com"
+                                    target="_blank"> <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            aria-label="Gmail" role="img" viewBox="0 0 512 512">
+                                            <rect width="512" height="512" rx="15%" fill="#00000000" />
+                                            <path d="M158 391v-142l-82-63V361q0 30 30 30" fill="#4285f4" />
+                                            <path d="M 154 248l102 77l102-77v-98l-102 77l-102-77" fill="#ea4335" />
+                                            <path d="M354 391v-142l82-63V361q0 30-30 30" fill="#34a853" />
+                                            <path d="M76 188l82 63v-98l-30-23c-27-21-52 0-52 26" fill="#c5221f" />
+                                            <path d="M436 188l-82 63v-98l30-23c27-21 52 0 52 26" fill="#fbbc04" />
+                                        </svg>
+                                    </span> Gmail</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {% if data %}
+    <div class="container mt-3">
+        <h3 class="fw-bold text-start text-light">Todo's :</h3>
+    </div>
+
+    <div class="container">
+        <table class="table table-new">
+            <thead>
+                <tr>
+                    <th scope="col">Status</th>
+                    <th scope="col" class="text-center">Todo</th>
+                    <th scope="col" class="text-end">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in data %}
+
+                <tr>
+                    <td scope="row">
+                        <div class="checkbox-wrapper-15">
+                            <input class="inp-cbx" id="cbx-15"  data-id="{{data.sno}}" name="checkbox" type="checkbox" {% if data.status %} checked {% endif %}  style="display: none;" />
+                            <label class="cbx" for="cbx-15">
+                                <span>
+                                    <svg width="12px" height="9px" viewbox="0 0 12 9">
+                                        <polyline points="1 5 4 8 11 1"></polyline>
+                                    </svg>
+                                </span>
+                            </label>
+                        </div>
+                    </td>
+
+
+                    <td class="text-center"><a href="/view/{{data.sno}}" class="text-light text-limited text-decoration-none">{{data.desc}}</a></td>
+
+
+                    <td class="text-end">
+
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-sm" style="border: none;" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6C12.5523 6 13 5.55228 13 5Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13C12.5523 13 13 12.5523 13 12Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>     
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/edit-todo/{{data.sno}}">Edit</a></li>
+                                  <li><a class="dropdown-item" href="/delete-todo/{{data.sno}}">Delete</a></li>
+                                </ul>
+                              </div>
+                    </td>
+                </tr>
+                    
+                {% endfor %}
+
+            </tbody>
+        </table>    
+    </div>
+        
+    {% else %}
+        <div class="container text-center">
+            <h4 class="mt-5 fs-2 fw-bold text-light">No Todo's </h4>
+            <p class="text-light ">Want to create one? Check <span><a class="text-info" href="/create">here</a></span></p>
+        </div>
+    {% endif %}
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+<style>
+        .text-limited {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+    .checkbox-wrapper-15 .cbx {
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+    }
+
+    .checkbox-wrapper-15 .cbx span {
+        display: inline-block;
+        vertical-align: middle;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .checkbox-wrapper-15 .cbx span:first-child {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        transform: scale(1);
+        vertical-align: middle;
+        border: 1px solid #ffffff;
+        transition: all 0.2s ease;
+    }
+
+    .checkbox-wrapper-15 .cbx span:first-child svg {
+        position: absolute;
+        z-index: 1;
+        top: 7px;
+        left: 5.3px;
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 16px;
+        stroke-dashoffset: 16px;
+        transition: all 0.3s ease;
+        transition-delay: 0.1s;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .checkbox-wrapper-15 .cbx span:first-child:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #001925;
+        display: block;
+        transform: scale(0);
+        opacity: 1;
+        border-radius: 50%;
+        transition-delay: 0.2s;
+    }
+
+    .checkbox-wrapper-15 .cbx span:last-child {
+        margin-left: 8px;
+    }
+
+    .checkbox-wrapper-15 .cbx span:last-child:after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background: #B9B8C3;
+        transform-origin: 0 0;
+        transform: scaleX(0);
+    }
+
+    .checkbox-wrapper-15 .cbx:hover span:first-child {
+        border-color: #00aeff;
+    }
+
+    .checkbox-wrapper-15 .inp-cbx:checked+.cbx span:first-child {
+        border-color: #00aeff;
+        background: #001925;
+        animation: check-15 0.6s ease;
+    }
+
+    .checkbox-wrapper-15 .inp-cbx:checked+.cbx span:first-child svg {
+        stroke-dashoffset: 0;
+    }
+
+    .checkbox-wrapper-15 .inp-cbx:checked+.cbx span:first-child:before {
+        transform: scale(2.2);
+        opacity: 0;
+        transition: all 0.6s ease;
+    }
+
+
+    @keyframes check-15 {
+        50% {
+            transform: scale(1.2);
+        }
+    }
+</style>
+
+<style>
+    .table-new {
+        --bs-table-color: #ffffff;
+        --bs-table-bg: #0000000;
+        --bs-table-border-color: #002c42;
+        --bs-table-striped-bg: #ffffff00;
+        --bs-table-striped-color: #000;
+        --bs-table-active-bg: #bacbe6;
+        --bs-table-active-color: #000;
+        --bs-table-hover-bg: #bfd1ec;
+        --bs-table-hover-color: #000;
+        color: var(--bs-table-color);
+        border-color: var(--bs-table-border-color)
+    }
+
+    [data-bs-theme=dark] {
+        color-scheme: dark;
+        --bs-body-color: #dee2e6;
+        --bs-body-color-rgb: 222, 226, 230;
+        --bs-body-bg: #002436;
+        --bs-body-bg-rgb: 33, 37, 41;
+        --bs-emphasis-color: #fff;
+        --bs-emphasis-color-rgb: 255, 255, 255;
+        --bs-secondary-color: rgba(222, 226, 230, 0.75);
+        --bs-secondary-color-rgb: 222, 226, 230;
+        --bs-secondary-bg: #343a40;
+        --bs-secondary-bg-rgb: 52, 58, 64;
+        --bs-tertiary-color: rgba(222, 226, 230, 0.5);
+        --bs-tertiary-color-rgb: 222, 226, 230;
+        --bs-tertiary-bg: #2b3035;
+        --bs-tertiary-bg-rgb: 43, 48, 53;
+        --bs-primary-text-emphasis: #6ea8fe;
+        --bs-secondary-text-emphasis: #a7acb1;
+        --bs-success-text-emphasis: #75b798;
+        --bs-info-text-emphasis: #6edff6;
+        --bs-warning-text-emphasis: #ffda6a;
+        --bs-danger-text-emphasis: #ea868f;
+        --bs-light-text-emphasis: #f8f9fa;
+        --bs-dark-text-emphasis: #dee2e6;
+        --bs-primary-bg-subtle: #031633;
+        --bs-secondary-bg-subtle: #161719;
+        --bs-success-bg-subtle: #051b11;
+        --bs-info-bg-subtle: #032830;
+        --bs-warning-bg-subtle: #332701;
+        --bs-danger-bg-subtle: #2c0b0e;
+        --bs-light-bg-subtle: #343a40;
+        --bs-dark-bg-subtle: #1a1d20;
+        --bs-primary-border-subtle: #084298;
+        --bs-secondary-border-subtle: #41464b;
+        --bs-success-border-subtle: #0f5132;
+        --bs-info-border-subtle: #087990;
+        --bs-warning-border-subtle: #997404;
+        --bs-danger-border-subtle: #842029;
+        --bs-light-border-subtle: #495057;
+        --bs-dark-border-subtle: #343a40;
+        --bs-heading-color: inherit;
+        --bs-link-color: #6ea8fe;
+        --bs-link-hover-color: #8bb9fe;
+        --bs-link-color-rgb: 110, 168, 254;
+        --bs-link-hover-color-rgb: 139, 185, 254;
+        --bs-code-color: #e685b5;
+        --bs-highlight-color: #dee2e6;
+        --bs-highlight-bg: #664d03;
+        --bs-border-color: #495057;
+        --bs-border-color-translucent: rgba(255, 255, 255, 0.15);
+        --bs-form-valid-color: #75b798;
+        --bs-form-valid-border-color: #75b798;
+        --bs-form-invalid-color: #ea868f;
+        --bs-form-invalid-border-color: #ea868f
+    }
+</style>
+<style>
+    .dropdown-menu .dropdown-item:hover {
+        background-color: #001b29;
+        color: #ffffff;
+    }
+</style>
+
+<script>
+    function limitWords(selector, maxWords) {
+        const cells = document.querySelectorAll(selector);
+        cells.forEach(cell => {
+            const words = cell.innerText.trim().split(/\s+/);
+            if (words.length > maxWords) {
+                const limitedText = words.slice(0, maxWords).join(' ') + '...';
+                cell.innerText = limitedText;
+            }
+        });
+    }
+
+    limitWords('.text-limited', 4);
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.inp-cbx').change(function () {
+            var isChecked = $(this).is(':checked');
+            var sno = $(this).data('id');
+
+            $.ajax({
+                url: '',
+                type: 'POST',
+                data: {
+                    'checked': isChecked,
+                    'sno' : sno,
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                },
+                success: function (response) {
+                    console.log('Checkbox state sent successfully:', response);
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error sending checkbox state:', error);
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
